@@ -1,3 +1,15 @@
+import pi
+def obtener_precision():
+    while True:
+        try:
+            precision = int(input("Ingresa la cantidad de dígitos decimales de precisión: "))
+            if precision < 1:
+                print("La precisión debe ser al menos 1.")
+            else:
+                return precision
+        except ValueError:
+            print("Por favor, ingresa un número válido.")
+
 def menuanalisis():
     print("=== Bienvenido al menu de análisis ===")
     print("Qué desea hacer?")
@@ -10,7 +22,9 @@ def menuanalisis():
     opcion = input("Ingrese la opcion que desea:")
     while True:
         if opcion == "1":
-            calcularpi()
+            precision = obtener_precision
+            pi_value = pi.chudnovsky_algorithm(precision)
+            print(f"Valor de pi calculado con {precision} dígitos de precisión: {pi_value}")
         if opcion =="2":
             calcularfact()
         if opcion=="3":
