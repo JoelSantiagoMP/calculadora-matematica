@@ -26,19 +26,5 @@ def chudnovsky_algorithm(precision):
         n += 1
     return pi
 
-def obtener_precision():
-    while True:
-        try:
-            precision = int(input("Ingresa la cantidad de dígitos decimales de precisión: "))
-            if precision < 1:
-                print("La precisión debe ser al menos 1.")
-            else:
-                return precision
-        except ValueError:
-            print("Por favor, ingresa un número válido.")
-
-precision = obtener_precision()
-pi_value = chudnovsky_algorithm(precision)
-print(f"Valor de pi calculado con {precision} dígitos de precisión: {pi_value}")
 
 
