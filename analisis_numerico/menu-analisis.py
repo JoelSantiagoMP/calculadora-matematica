@@ -2,6 +2,7 @@ import pi
 import factorial
 import fibonacci
 import numerosamigos
+import numerosperfectos
 def obtener_precision():
     while True:
         try:
@@ -59,7 +60,14 @@ def menuanalisis():
             except ValueError:
                 print("Por favor, ingresa un número válido.")
         if opcion=="5":
-            verperfectos()
+            try:
+                numero = int(input("Ingresa un número para verificar si es perfecto: "))
+                if numerosperfectos.es_numero_perfecto(numero):
+                    print(f"{numero} es un número perfecto.")
+                else:
+                    print(f"{numero} no es un número perfecto.")
+            except ValueError:
+                print("Por favor, ingresa un número válido.")
         if opcion=="6":
             print("Saliendo del sistema...")
             break
