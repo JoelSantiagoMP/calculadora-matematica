@@ -70,4 +70,4 @@ def main():
             print("Opción no válida. Por favor, elija un número entre 1 y 5.")
 
 if __name__ == "__main__":
-    main()
+    main() 

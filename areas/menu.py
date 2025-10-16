@@ -6,4 +6,4 @@ def mostrar_menu():
     print("3. Calcular Área de un Círculo")
     print("4. Calcular Área de un Triángulo ")
     print("5. Salir")
-    print("----------------------------")
+    print("----------------------------")  
