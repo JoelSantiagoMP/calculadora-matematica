@@ -1,3 +1,9 @@
+from triangulo import area_triangulo
+from cuadrado import area_cuadrado
+from rectangulo import area_rectangulo
+from circulo import area_circulo
+from menu import mostrar_menu 
+
 def main():
     """Función principal del programa."""
     while True:
