@@ -3,7 +3,7 @@ import factorial
 import fibonacci
 import numerosamigos
 import numerosperfectos
-def obtener_precision():
+def obtener_precision(): 
     while True:
         try:
             precision = int(input("Ingresa la cantidad de dígitos decimales de precisión: "))

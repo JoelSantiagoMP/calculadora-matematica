@@ -5,5 +5,5 @@ def suma_divisores(n):
             divisores.append(i)
     return sum(divisores)
 
-def es_numero_perfecto(n):
+def es_numero_perfecto(n): 
     return n == suma_divisores(n)
