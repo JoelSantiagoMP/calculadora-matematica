@@ -1,4 +1,6 @@
 import pi
+import factorial
+import fibonacci
 def obtener_precision():
     while True:
         try:
@@ -26,9 +28,25 @@ def menuanalisis():
             pi_value = pi.chudnovsky_algorithm(precision)
             print(f"Valor de pi calculado con {precision} dígitos de precisión: {pi_value}")
         if opcion =="2":
-            calcularfact()
+            try:
+                numero = int(input("Ingresa un número para calcular su factorial: "))
+                if numero < 0:
+                    print("El número debe ser mayor o igual a 0.")
+                else:
+                    resultado = factorial.factorial(numero)
+                    print(f"El factorial de {numero} es {resultado}")
+            except ValueError:
+                print("Por favor, ingresa un número válido.")
         if opcion=="3":
-            calcularfibo()
+            try:
+                numero = int(input("Ingresa cuántos términos de la sucesión de Fibonacci deseas calcular: "))
+                if numero < 1:
+                    print("Por favor, ingresa un número mayor o igual a 1.")
+                else:
+                    resultado = fibonacci.fibonacci(numero)
+                    print(f"La sucesión de Fibonacci hasta el {numero}° término es: {resultado}")
+            except ValueError:
+                print("Por favor, ingresa un número válido.")
         if opcion=="4":
             vernumamigos()
         if opcion=="5":
