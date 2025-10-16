@@ -1,6 +1,7 @@
 import pi
 import factorial
 import fibonacci
+import numerosamigos
 def obtener_precision():
     while True:
         try:
@@ -48,7 +49,15 @@ def menuanalisis():
             except ValueError:
                 print("Por favor, ingresa un número válido.")
         if opcion=="4":
-            vernumamigos()
+            try:
+                numero1 = int(input("Ingresa el primer número: "))
+                numero2 = int(input("Ingresa el segundo número: "))
+                if numerosamigos.son_numeros_amigos(numero1, numero2):
+                    print(f"{numero1} y {numero2} son números amigos.")
+                else:
+                    print(f"{numero1} y {numero2} no son números amigos.")
+            except ValueError:
+                print("Por favor, ingresa un número válido.")
         if opcion=="5":
             verperfectos()
         if opcion=="6":
